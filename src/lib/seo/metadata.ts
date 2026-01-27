@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
-import { siteConfig } from "@/data/site"
+import { siteConfig } from "@/config/site"
 
 export function getBaseMetadata(): Metadata {
   return {
-    metadataBase: new URL(siteConfig.domain),
+    metadataBase: new URL(siteConfig.url),
 
     title: {
       default: siteConfig.name,
@@ -15,7 +15,7 @@ export function getBaseMetadata(): Metadata {
     openGraph: {
       title: siteConfig.name,
       description: siteConfig.description,
-      url: siteConfig.domain,
+      url: siteConfig.url,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type: "website",

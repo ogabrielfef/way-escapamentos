@@ -6,10 +6,7 @@ export default async function Home() {
 
   return (
     <>
-      <Hero
-        title={content.title}
-        description={content.description}
-      />
+      <Hero/>
     </>
   )
 }
