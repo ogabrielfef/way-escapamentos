@@ -1,13 +1,13 @@
-import { siteConfig } from "@/data/site"
+// import { siteConfig } from "@/data/site"
 
-export default function robots() {
-  return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
-    ],
-    sitemap: `${siteConfig.domain}/sitemap.xml`,
-  }
-}
+// export default function robots() {
+//   return {
+//     rules: [
+//       {
+//         userAgent: "*",
+//         allow: "/",
+//       },
+//     ],
+//     sitemap: `${siteConfig.domain}/sitemap.xml`,
+//   }
+// }
