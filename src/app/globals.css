@@ -2,55 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* =========================
-   THEME TOKENS (shadcn)
-========================= */
+/* ============================= */
+/* BASE LAYER */
+/* ============================= */
 
 @layer base {
   :root {
-    /* use HSL → combine com hsl(var()) no config */
+    /* Way Escapamentos - Color Palette */
 
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 188 100% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 188 100% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 188 100% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 188 100% 12%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 188 100% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 15% 94%;
+    --muted-foreground: 210 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 48 98% 51%;
+    --accent-foreground: 188 100% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 188 100% 12%;
 
     --radius: 0.5rem;
+
+    /* Custom Way colors */
+    --way-blue: 188 100% 12%;
+    --way-yellow: 48 98% 51%;
+    --way-navy: 220 100% 26%;
+    --way-light-text: 240 2% 87%;
+    --way-dark: 188 100% 12%;
+    --way-gray: 210 10% 45%;
+    --way-light: 210 20% 97%;
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(188 100% 12% / 0.08);
+    --shadow-hover: 0 8px 30px -6px hsl(188 100% 12% / 0.15);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: 188 100% 8%;
+    --foreground: 240 2% 87%;
+    --card: 188 100% 12%;
+    --card-foreground: 240 2% 87%;
   }
 
   * {
@@ -58,6 +66,72 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    /* fonte agora vem do next/font automaticamente */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
   }
 }
+
+/* ============================= */
+/* COMPONENTS */
+/* ============================= */
+
+@layer components {
+  .way-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .way-section {
+    @apply py-16 md:py-24;
+  }
+
+  .way-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold uppercase;
+  }
+
+  .way-subheading {
+    @apply text-lg md:text-xl text-muted-foreground font-light;
+  }
+
+  .way-card {
+    @apply bg-card rounded-lg overflow-hidden transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .way-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+
+    .way-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+
+  .way-gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ============================= */
+/* UTILITIES */
+/* ============================= */
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+

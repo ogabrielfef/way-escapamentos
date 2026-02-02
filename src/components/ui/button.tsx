@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -11,38 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-way",
-
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-
-        ghost:
-          "hover:bg-accent hover:text-accent-foreground",
-
-        link:
-          "text-primary underline-offset-4 hover:underline",
-
-        // Way custom variants
-        hero:
-          "bg-accent text-accent-foreground font-display uppercase tracking-wider text-base px-8 py-6 hover:shadow-accent hover:scale-105",
-
-        wayPrimary:
-          "bg-primary text-primary-foreground font-display uppercase tracking-wide hover:bg-primary/90 hover:shadow-way",
-
-        wayOutline:
-          "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground font-display uppercase tracking-wide",
-
-        wayAccent:
-          "bg-accent text-accent-foreground font-medium hover:shadow-accent hover:brightness-105",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-way",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-accent text-accent-foreground font-display uppercase tracking-wider text-base px-8 py-6 hover:shadow-accent hover:scale-105",
+        wayPrimary: "bg-primary text-primary-foreground font-display uppercase tracking-wide hover:bg-primary/90 hover:shadow-way",
+        wayOutline: "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground font-display uppercase tracking-wide",
+        wayAccent: "bg-accent text-accent-foreground font-medium hover:shadow-accent hover:brightness-105",
       },
-
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
@@ -51,34 +28,25 @@ const buttonVariants = cva(
         icon: "h-10 w-10",
       },
     },
-
     defaultVariants: {
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
-export type ButtonProps = React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  };
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-
-    return (
-      <Comp
-        ref={ref}
-        className={cn(buttonVariants({ variant, size, className }))}
-        {...props}
-      />
-    );
-  }
+    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+  },
 );
-
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
-

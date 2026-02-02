@@ -1,71 +1,71 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import { useState } from "react"
-import { usePathname } from "next/navigation"
-import { Menu, Phone, MapPin } from "lucide-react"
+import { Menu, Phone, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import WayLogo from "@/components/sections/WayLogo";
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import { cn } from "@/lib/utils"
-import { siteConfig } from "@/config/site"
-import WayLogo from "@/components/ui/WayLogo"
-import Container from "./Container"
+const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // const location = useLocation();
 
-export default function Header() {
-  const pathname = usePathname()
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const navItems = [
+    { label: "Início", href: "/" },
+    { label: "Produtos", href: "/produtos" },
+    { label: "Certificações", href: "/certificacoes" },
+    { label: "Sobre", href: "/sobre" },
+    { label: "Serviços", href: "/servicos" },
+    { label: "Contato", href: "/contato" },
+  ];
 
+  const pathname = usePathname();
+  
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/"
-    return pathname.startsWith(href)
-  }
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-
-      {/* ================= TOP BAR ================= */}
-      <div className="bg-[#0B3C40] text-white text-xs">
-        <Container className="flex h-9 items-center justify-between">
-
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Top bar */}
+      <div className="bg-primary text-primary-foreground py-2">
+        <div className="way-container flex items-center justify-between text-sm">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
-              <Phone className="h-3.5 w-3.5" />
-              {siteConfig.contact.phone}
+              <Phone className="w-4 h-4" />
+              (11) 99999-9999
             </span>
-
             <span className="hidden sm:flex items-center gap-2">
-              <MapPin className="h-3.5 w-3.5" />
-              {siteConfig.contact.city}, {siteConfig.contact.state}
+              <MapPin className="w-4 h-4" />
+              Careaçu, MG
             </span>
           </div>
-
           <span className="hidden md:block font-medium">
-            {siteConfig.company.slogan}
+            Fábrica de Escapamentos e Catalisadores
           </span>
-        </Container>
+        </div>
       </div>
 
-
-      {/* ================= NAVBAR ================= */}
-      <nav className="bg-white border-b shadow-sm">
-        <Container className="flex h-[72px] items-center justify-between">
-
-          {/* Logo */}
+      {/* Main nav */}
+      <nav className="bg-background/95 backdrop-blur-md border-b border-border">
+        <div className="way-container flex items-center justify-between py-4">
           <Link href="/">
-            <WayLogo className="h-9 w-auto" />
+            <WayLogo />
           </Link>
 
-          {/* Desktop menu */}
-          <ul className="hidden lg:flex items-center gap-10">
-            {siteConfig.nav.map((item) => (
-              <li key={item.href}>
+          {/* Desktop Navigation */}
+          <ul className="hidden lg:flex items-center gap-8">
+            {navItems.map((item) => (
+              <li key={item.label}>
                 <Link
                   href={item.href}
-                  className={cn(
-                    "text-sm font-semibold tracking-wide transition-colors",
+                  className={`font-display text-sm uppercase tracking-wide transition-colors duration-300 ${
                     isActive(item.href)
-                      ? "text-yellow-500"
-                      : "text-gray-700 hover:text-yellow-500"
-                  )}
+                      ? "text-accent"
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -73,58 +73,57 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* Right side */}
           <div className="flex items-center gap-4">
-
-            {/* Botão amarelo */}
-            <Link
-              href="/contato"
-              className="hidden sm:inline-flex bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-sm px-5 py-2.5 rounded-md transition"
-            >
-              Orçamento
-            </Link>
-
-            {/* Mobile */}
-            <button
-              className="lg:hidden"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
-              <Menu className="h-6 w-6 text-gray-800" />
-            </button>
-          </div>
-        </Container>
-
-
-        {/* ================= MOBILE ================= */}
-        {mobileOpen && (
-          <div className="lg:hidden border-t bg-white">
-            <Container className="py-4 space-y-4">
-              {siteConfig.nav.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={cn(
-                    "block font-semibold",
-                    isActive(item.href)
-                      ? "text-yellow-500"
-                      : "text-gray-700"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
-
-              <Link
-                href="/contato"
-                className="block text-center bg-yellow-400 text-black font-semibold py-2 rounded-md"
-              >
+            <Link href="/contato">
+              <Button variant="wayAccent" className="hidden sm:flex">
                 Orçamento
-              </Link>
-            </Container>
+              </Button>
+            </Link>
+            
+            {/* Mobile menu button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <Menu className="w-6 h-6" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-background border-t border-border animate-slide-up">
+            <ul className="way-container py-4 space-y-4">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className={`block font-display uppercase tracking-wide transition-colors text-sm py-2 ${
+                      isActive(item.href)
+                        ? "text-accent"
+                        : "text-foreground hover:text-primary"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/contato" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="wayAccent" className="w-full mt-2">
+                    Orçamento
+                  </Button>
+                </Link>
+              </li>
+            </ul>
           </div>
         )}
       </nav>
     </header>
-  )
-}
+  );
+};
+
+export default Header;

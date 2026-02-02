@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const WhatsAppButton = () => {
   const phoneNumber = "5511999999999"; // Número de exemplo
@@ -7,7 +8,7 @@ const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <a
+    <Link
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
@@ -23,7 +24,7 @@ const WhatsAppButton = () => {
       
       {/* Pulse animation */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25" />
-    </a>
+    </Link>
   );
 };
 

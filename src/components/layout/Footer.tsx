@@ -1,74 +1,65 @@
-import Link from "next/link"
+'use client'
 
-import WayLogo from "@/components/ui/WayLogo"
-import Container from "@/components/layout/Container"
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import WayLogo from "@/components/sections/WayLogo";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear()
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const quickLinks = [
+    { label: "Início", href: "/" },
+    { label: "Produtos", href: "/produtos" },
+    { label: "Certificações", href: "/certificacoes" },
+    { label: "Sobre", href: "/sobre" },
+    { label: "Serviços", href: "/servicos" },
+    { label: "Contato", href: "/contato" },
+  ];
 
   return (
-    <footer className="border-t bg-muted/40">
-      <Container className="py-12">
-        <div className="grid gap-10 md:grid-cols-4">
-          {/* ========= Logo + descrição ========= */}
+    <footer className="bg-way-dark text-way-light-text">
+      <div className="way-container py-12">
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Logo & Description */}
           <div className="md:col-span-2">
             <WayLogo size="default" className="mb-4" />
-
-            <p className="max-w-sm text-sm text-muted-foreground leading-relaxed">
-              {siteConfig.description}
+            <p className="text-way-light-text/70 mt-4 max-w-sm text-sm leading-relaxed">
+              Fábrica de escapamentos e catalisadores com certificação Inmetro. 
+              Parque industrial moderno localizado em Careaçu, Sul de Minas Gerais, desde 2015.
             </p>
-
-            <div className="mt-4 text-sm text-muted-foreground space-y-1">
-              <p>
-                {siteConfig.contact.city} - {siteConfig.contact.state}
-              </p>
-              <p>{siteConfig.contact.phone}</p>
-              <p>{siteConfig.contact.email}</p>
-            </div>
           </div>
 
-          {/* ========= Navegação ========= */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold tracking-wide uppercase mb-4">
-              Navegação
+            <h4 className="font-display uppercase tracking-wider text-sm font-semibold mb-4 text-accent">
+              Links Rápidos
             </h4>
-
             <ul className="space-y-2">
-              {siteConfig.nav.map((item) => (
-                <li key={item.href}>
+              {quickLinks.map((link) => (
+                <li key={link.label}>
                   <Link
-                    href={item.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    href={link.href}
+                    className="text-way-light-text/70 hover:text-accent transition-colors text-sm"
                   >
-                    {item.label}
+                    {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* ========= Produtos ========= */}
+          {/* Categories */}
           <div>
-            <h4 className="text-sm font-semibold tracking-wide uppercase mb-4">
-              Produtos
+            <h4 className="font-display uppercase tracking-wider text-sm font-semibold mb-4 text-accent">
+              Categorias
             </h4>
-
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {[
-                "Escapamentos Linha Leve",
-                "Escapamentos Linha Pesada",
-                "Catalisadores",
-                "Silenciosos",
-                "Sistemas Esportivos",
-              ].map((item) => (
-                <li key={item}>
+            <ul className="space-y-2">
+              {["Esportivos", "Headers", "Downpipes", "Ponteiras", "Silenciadores"].map((cat) => (
+                <li key={cat}>
                   <Link
                     href="/produtos"
-                    className="hover:text-primary transition-colors"
+                    className="text-way-light-text/70 hover:text-accent transition-colors text-sm"
                   >
-                    {item}
+                    {cat}
                   </Link>
                 </li>
               ))}
@@ -76,32 +67,31 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ========= Bottom bar ========= */}
-        <div className="mt-10 border-t pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>
-            © {currentYear} {siteConfig.company.legalName}. Todos os direitos
-            reservados.
+        {/* Bottom Bar */}
+        <div className="border-t border-way-light-text/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-way-light-text/50 text-sm">
+            © {currentYear} Way Escapamentos. Todos os direitos reservados.
           </p>
-
-          <div className="flex items-center gap-6">
-            <Link href="/politica-de-privacidade" className="hover:text-primary">
+          <div className="flex gap-6">
+            <Link
+              href="#"
+              className="text-way-light-text/50 hover:text-accent transition-colors text-sm"
+              onClick={(e) => e.preventDefault()}
+            >
               Política de Privacidade
             </Link>
-
-            <Link href="/termos-de-uso" className="hover:text-primary">
-              Termos de Uso
-            </Link>
-
             <Link
-              href={siteConfig.socials.instagram}
-              target="_blank"
-              className="hover:text-primary"
+              href="#"
+              className="text-way-light-text/50 hover:text-accent transition-colors text-sm"
+              onClick={(e) => e.preventDefault()}
             >
-              Instagram
+              Termos de Uso
             </Link>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;

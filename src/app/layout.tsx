@@ -4,10 +4,23 @@ import { getBaseMetadata } from "@/lib/seo/metadata"
 
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
+import WhatsAppButton from "@/components/layout/WhatsAppButton"
 
-import { Geist } from "next/font/google"
+import { Roboto, Poppins } from "next/font/google"
 
-const geist = Geist({ subsets: ["latin"] })
+const bodyFont = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-body",
+  display: "swap",
+})
+
+const displayFont = Poppins({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-display",
+  display: "swap",
+})
 
 export const metadata = getBaseMetadata()
 
@@ -17,14 +30,14 @@ export default function RootLayout({
   children: ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={geist.className}>
-      <body className="min-h-screen flex flex-col">
+    <html lang="pt-BR" className={`${bodyFont.variable} ${displayFont.variable}`}>
+      <body className="min-h-screen flex flex-col font-sans">
         <Header />
-
         <main className="flex-1">{children}</main>
-
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   )
 }
+
