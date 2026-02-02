@@ -1,20 +1,20 @@
-import { siteConfig } from "@/data/site"
+// import { siteConfig } from "@/data/home"
 
-export default function sitemap() {
-  const base = siteConfig.domain
+// export default function sitemap() {
+//   const base = siteConfig.domain
 
-  return [
-    {
-      url: base,
-      lastModified: new Date(),
-    },
-    {
-      url: `${base}/about`,
-      lastModified: new Date(),
-    },
-    {
-      url: `${base}/contact`,
-      lastModified: new Date(),
-    },
-  ]
-}
+//   return [
+//     {
+//       url: base,
+//       lastModified: new Date(),
+//     },
+//     {
+//       url: `${base}/about`,
+//       lastModified: new Date(),
+//     },
+//     {
+//       url: `${base}/contact`,
+//       lastModified: new Date(),
+//     },
+//   ]
+// }
