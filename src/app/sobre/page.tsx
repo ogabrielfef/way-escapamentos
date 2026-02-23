@@ -113,7 +113,7 @@ const Sobre = () => {
                 <div className="flex items-center gap-3 p-4 bg-secondary rounded-lg">
                   <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
                   <p className="text-foreground text-sm">
-                    <strong>Localização:</strong> Rodovia Fernão Dias, Km 822 - Parque Industrial, 
+                    <strong>Localização:</strong> Rodovia Fernão Dias, Km 822 - Zona Rural, 
                     Careaçu, Sul de Minas Gerais
                   </p>
                 </div>

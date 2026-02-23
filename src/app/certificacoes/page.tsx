@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import wayLogoImg from "@/assets/way-logo.png";
+import seloInmetroImg from "@/assets/selo-inmetro.png";
 import { 
   ShieldCheck, 
   Award, 
@@ -12,6 +14,7 @@ import {
   FlaskConical,
   ClipboardCheck
 } from "lucide-react";
+import Image from "next/image";
 
 const certifications = [
   {
@@ -22,8 +25,8 @@ const certifications = [
   },
   {
     icon: Award,
-    title: "Selo de Qualidade",
-    description: "Reconhecimento pela excelência em processos de fabricação, assegurando que cada peça atenda aos mais altos padrões do mercado automotivo.",
+    title: "Selo de Qualidade e Meio Ambiente",
+    description: "Reconhecimento pela excelência em processos de fabricação e compromisso ambiental, assegurando que cada peça atenda aos mais altos padrões do mercado automotivo.",
     badge: "Excelência",
   },
   {
@@ -78,17 +81,42 @@ const Certificacoes = () => {
       <main className="pt-32">
         {/* Page Header */}
         <section className="bg-way-dark py-16">
-          <div className="way-container text-center">
-            <span className="text-accent font-display uppercase tracking-widest text-sm font-medium">
-              Qualidade Certificada
-            </span>
-            <h1 className="way-heading text-primary-foreground mt-2 mb-4">
-              Certificações e Qualidade
-            </h1>
-            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-              Nosso compromisso com a excelência vai além das palavras. 
-              Conheça os processos e certificações que garantem a qualidade Way.
-            </p>
+          <div className="way-container">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+              {/* Logo da marca - esquerda */}
+              <div className="flex-shrink-0">
+                <Image 
+                  src={wayLogoImg} 
+                  alt="Way Escapamentos" 
+                  className="h-20 md:h-28 w-auto drop-shadow-[0_0_20px_rgba(253,208,7,0.3)]" 
+                />
+              </div>
+
+              {/* Texto central */}
+              <div className="text-center flex-1 max-w-2xl">
+                <span className="text-accent font-display uppercase tracking-widest text-sm font-medium">
+                  Qualidade Certificada
+                </span>
+                <h1 className="way-heading text-primary-foreground mt-2 mb-4">
+                  Certificações e Qualidade
+                </h1>
+                <p className="text-primary-foreground/70 text-lg">
+                  Nosso compromisso com a excelência vai além das palavras. 
+                  Conheça os processos e certificações que garantem a qualidade Way.
+                </p>
+              </div>
+
+              {/* Selo Inmetro - direita */}
+              <div className="flex-shrink-0">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-white/10 border-2 border-accent/50 flex items-center justify-center p-4">
+                  <Image 
+                    src={seloInmetroImg} 
+                    alt="Selo Inmetro" 
+                    className="w-16 h-16 md:w-24 md:h-24 object-contain invert"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

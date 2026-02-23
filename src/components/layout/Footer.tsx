@@ -22,10 +22,14 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <WayLogo size="default" className="mb-4" />
-            <p className="text-way-light-text/70 mt-4 max-w-sm text-sm leading-relaxed">
-              Fábrica de escapamentos e catalisadores com certificação Inmetro. 
-              Parque industrial moderno localizado em Careaçu, Sul de Minas Gerais, desde 2015.
-            </p>
+            <div className="text-way-light-text/70 mt-4 max-w-sm text-sm leading-relaxed space-y-1">
+              <p className="font-semibold text-way-light-text/90">WAY ESCAPAMENTOS LTDA</p>
+              <p>CNPJ: 23.609.981/0001-74</p>
+              <p>ROD FERNAO DIAS, S/N, KM 822</p>
+              <p>37.582-000, ZONA RURAL, CAREACU, MG</p>
+              <p>Email: CONTATO@WAYESCAPAMENTOS.COM</p>
+              <p>Telefone: (35) 3476-0000</p>
+            </div>
           </div>
 
           {/* Quick Links */}

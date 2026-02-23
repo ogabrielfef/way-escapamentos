@@ -7,6 +7,7 @@ import productExhaust1 from "@/assets/product-exhaust-1.jpg";
 import productExhaust2 from "@/assets/product-exhaust-2.jpg";
 import productExhaust3 from "@/assets/product-exhaust-3.jpg";
 import productExhaust4 from "@/assets/product-exhaust-4.jpg";
+import Link from "next/link";
 
 const products = [
   {
@@ -118,7 +119,7 @@ const Produtos = () => {
                       Catálogo Digital Completo
                     </h2>
                     <p className="text-accent-foreground/80 mb-4">
-                      Acesse nosso catálogo completo com mais de 500 modelos para diversas montadoras. 
+                      Acesse nosso catálogo completo com mais de 4000 modelos para diversas montadoras. 
                       O catálogo é um aplicativo gratuito disponível na plataforma <strong>Baixecatalogo</strong>.
                     </p>
                     
@@ -147,15 +148,15 @@ const Produtos = () => {
                       </ol>
                     </div>
                     
-                    <a 
-                      href="https://baixecatalogo.com.br" 
+                    <Link 
+                      href="https://www.baixecatalogo.com.br/catalogo/way-escapamentos" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-accent-foreground text-accent px-6 py-3 rounded-full font-display uppercase tracking-wide text-sm hover:bg-accent-foreground/90 transition-colors"
                     >
                       <Download className="w-5 h-5" />
                       Acessar Baixecatalogo
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
