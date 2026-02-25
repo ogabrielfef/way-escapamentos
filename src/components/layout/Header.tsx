@@ -35,7 +35,7 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              (11) 99999-9999
+              (35) 3476-0000
             </span>
             <span className="hidden sm:flex items-center gap-2">
               <MapPin className="w-4 h-4" />
@@ -74,11 +74,11 @@ const Header = () => {
           </ul>
 
           <div className="flex items-center gap-4">
-            <Link href="/contato">
+            {/* <Link href="/contato">
               <Button variant="wayAccent" className="hidden sm:flex">
                 Orçamento
               </Button>
-            </Link>
+            </Link> */}
             
             {/* Mobile menu button */}
             <Button

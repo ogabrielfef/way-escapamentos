@@ -19,14 +19,6 @@ const products = [
     featured: true,
   },
   {
-    id: 2,
-    image: productExhaust2,
-    name: "Header Performance 4-1",
-    category: "Headers",
-    description: "Coletor de escape 4-1 em aço inox mandrilado para máxima performance e fluxo de gases.",
-    featured: false,
-  },
-  {
     id: 3,
     image: productExhaust3,
     name: "Downpipe Catless",
@@ -76,12 +68,12 @@ const products = [
   },
 ];
 
-const categories = ["Todos", "Esportivo", "Headers", "Downpipes", "Ponteiras", "Silenciadores", "Catalisadores", "INOX"];
+const categories = ["Todos", "Esportivo", "Downpipes", "Ponteiras", "Silenciadores", "Catalisadores", "INOX"];
 
-const brands = [
-  "Chevrolet", "Fiat", "Volkswagen", "Ford", "Honda", "Toyota", 
-  "Hyundai", "Renault", "Nissan", "Jeep", "Peugeot", "Citroën"
-];
+// const brands = [
+//   "Chevrolet", "Fiat", "Volkswagen", "Ford", "Honda", "Toyota", 
+//   "Hyundai", "Renault", "Nissan", "Jeep", "Peugeot", "Citroën"
+// ];
 
 const Produtos = () => {
   return (
@@ -119,8 +111,8 @@ const Produtos = () => {
                       Catálogo Digital Completo
                     </h2>
                     <p className="text-accent-foreground/80 mb-4">
-                      Acesse nosso catálogo completo com mais de 4000 modelos para diversas montadoras. 
-                      O catálogo é um aplicativo gratuito disponível na plataforma <strong>Baixecatalogo</strong>.
+                      Acesse nosso catálogo completo com mais de 4000 opções para diversas montadoras. 
+                      Catálogo gratuito disponível para Android, IOS e PC na plataforma <strong>Baixecatalogo</strong>.
                     </p>
                     
                     {/* Instructions */}
@@ -131,11 +123,11 @@ const Produtos = () => {
                       <ol className="text-accent-foreground/80 text-sm space-y-2">
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</span>
-                          <span>Acesse o site <strong>baixecatalogo.com.br</strong> no seu computador</span>
+                          <span>Acesse o site <strong>baixecatalogo.com.br/catalogo/way-escapamentos</strong> no seu computador</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</span>
-                          <span>Faça o download gratuito do aplicativo Baixecatalogo</span>
+                          <span>Faça o download gratuito do aplicativo</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</span>
@@ -165,7 +157,7 @@ const Produtos = () => {
         </section>
 
         {/* Brands */}
-        <section className="bg-secondary py-8 border-b border-border">
+        {/* <section className="bg-secondary py-8 border-b border-border">
           <div className="way-container">
             <p className="text-center text-sm text-muted-foreground mb-4 font-display uppercase tracking-wide">
               Montadoras Atendidas
@@ -181,7 +173,7 @@ const Produtos = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Products Section */}
         <section className="way-section">
@@ -224,7 +216,7 @@ const Produtos = () => {
               ))}
             </div>
 
-            {/* Pagination */}
+            {/* Pagination
             <div className="flex justify-center gap-2">
               {[1, 2, 3, 4, 5].map((page) => (
                 <button
@@ -239,7 +231,7 @@ const Produtos = () => {
                   {page}
                 </button>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
 

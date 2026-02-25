@@ -6,7 +6,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const timeline = [
   {
-    year: "2015",
+    year: "2016",
     title: "Fundação",
     description: "Início das atividades com foco em qualidade e atendimento personalizado.",
   },
@@ -79,7 +79,7 @@ const Sobre = () => {
               Sobre a Way Escapamentos
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-              Desde 2015 fabricando escapamentos e catalisadores com qualidade, 
+              Desde 2016 fabricando escapamentos e catalisadores com qualidade, 
               certificação e compromisso com nossos clientes
             </p>
           </div>
@@ -114,16 +114,16 @@ const Sobre = () => {
                   <MapPin className="w-6 h-6 text-primary flex-shrink-0" />
                   <p className="text-foreground text-sm">
                     <strong>Localização:</strong> Rodovia Fernão Dias, Km 822 - Zona Rural, 
-                    Careaçu, Sul de Minas Gerais
+                    Careaçu, Minas Gerais
                   </p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { number: "2015", label: "Ano de Fundação" },
-                  { number: "1.000+", label: "Clientes Atendidos" },
-                  { number: "500+", label: "Modelos no Catálogo" },
+                  { number: "2016", label: "Ano de Fundação" },
+                  { number: "5.000+", label: "Clientes Atendidos" },
+                  { number: "4.000+", label: "Modelos no Catálogo" },
                   { number: "100%", label: "Certificação Inmetro" },
                 ].map((stat) => (
                   <div

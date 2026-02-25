@@ -70,7 +70,7 @@ const commitments = [
   "Suporte técnico especializado",
   "Documentação técnica disponível",
   "Atendimento pós-venda dedicado",
-  "Reposição rápida em caso de defeitos",
+  "Reposição rápida em caso de Garantia",
   "Treinamento para parceiros e revendedores",
   "Atualização constante do catálogo",
 ];

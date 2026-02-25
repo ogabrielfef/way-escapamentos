@@ -160,7 +160,6 @@ const Hero = () => {
             Produtos de alta qualidade com certificação Inmetro.
             <br className="hidden md:block" />
             <span className="md:hidden"> </span>
-            Atendimento nacional.
           </p>
 
           {/* CTA Button */}

@@ -18,7 +18,7 @@ const mainServices = [
   {
     icon: Factory,
     title: "Fabricação de Escapamentos",
-    description: "Produção própria com equipamentos modernos e tecnologia de ponta. Fabricamos escapamentos para as principais montadoras do mercado brasileiro.",
+    description: "Produção própria com equipamentos modernos e tecnologia italiana de ponta. Fabricamos escapamentos para reposição das principais montadoras do mercado.",
     features: [
       "Linha completa para carros nacionais e importados",
       "Aço galvanizado de alta durabilidade",
@@ -39,10 +39,10 @@ const mainServices = [
   },
   {
     icon: Wrench,
-    title: "Produtos Customizados INOX",
-    description: "Desenvolvemos soluções sob medida em aço inox 304 para atender necessidades específicas de cada cliente.",
+    title: "Produtos Customizados em aço INOX",
+    description: "Desenvolvemos soluções sob medida em aço inox para atender necessidades específicas de cada cliente.",
     features: [
-      "Aço inox 304 de alta qualidade",
+      "Aço inox de alta qualidade",
       "Design personalizado",
       "Produção sob encomenda",
       "Acabamento espelhado ou escovado",
@@ -94,28 +94,28 @@ const additionalServices = [
   },
 ];
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Contato",
-    description: "Entre em contato informando o veículo e o tipo de produto desejado.",
-  },
-  {
-    number: "02",
-    title: "Orçamento",
-    description: "Receba um orçamento detalhado com prazo e formas de pagamento.",
-  },
-  {
-    number: "03",
-    title: "Produção",
-    description: "Após aprovação, iniciamos a fabricação do seu pedido.",
-  },
-  {
-    number: "04",
-    title: "Entrega",
-    description: "Enviamos o produto com embalagem segura e rastreamento.",
-  },
-];
+// const processSteps = [
+//   {
+//     number: "01",
+//     title: "Contato",
+//     description: "Entre em contato informando o veículo e o tipo de produto desejado.",
+//   },
+//   {
+//     number: "02",
+//     title: "Orçamento",
+//     description: "Receba um orçamento detalhado com prazo e formas de pagamento.",
+//   },
+//   {
+//     number: "03",
+//     title: "Produção",
+//     description: "Após aprovação, iniciamos a fabricação do seu pedido.",
+//   },
+//   {
+//     number: "04",
+//     title: "Entrega",
+//     description: "Enviamos o produto com embalagem segura e rastreamento.",
+//   },
+// ];
 
 const Servicos = () => {
   return (
@@ -174,7 +174,7 @@ const Servicos = () => {
           </div>
         </section>
 
-        {/* Process */}
+        {/* Process
         <section className="way-section bg-way-dark text-primary-foreground">
           <div className="way-container">
             <div className="text-center mb-12">
@@ -207,7 +207,7 @@ const Servicos = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Additional Services */}
         <section className="way-section bg-secondary">

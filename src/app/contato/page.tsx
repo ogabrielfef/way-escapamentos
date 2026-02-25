@@ -22,12 +22,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefones",
-    content: ["(35) 3333-4444", "(35) 99999-9999 (WhatsApp)"],
+    content: ["(35) 3476-0000", "(35) 99999-9999 (WhatsApp)"],
   },
   {
     icon: Mail,
     title: "E-mail",
-    content: ["contato@wayescapamentos.com.br", "vendas@wayescapamentos.com.br"],
+    content: ["vendas@wayescapamentos.com.br"],
   },
   {
     icon: Clock,
@@ -66,10 +66,10 @@ const Contato = () => {
             <h1 className="way-heading text-primary-foreground mt-2 mb-4">
               Entre em Contato
             </h1>
-            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
+            {/* <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
               Estamos prontos para atender você. Solicite um orçamento, tire suas dúvidas 
               ou visite nossa fábrica em Careaçu, MG.
-            </p>
+            </p> */}
           </div>
         </section>
 
@@ -154,9 +154,8 @@ const Contato = () => {
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                       >
                         <option value="">Selecione...</option>
-                        <option value="pf">Pessoa Física</option>
-                        <option value="pj">Pessoa Jurídica</option>
-                        <option value="revenda">Revenda / Distribuidor</option>
+                        <option value="pj">Loja</option>
+                        <option value="revenda">Distribuidor</option>
                       </select>
                     </div>
                     <div>
@@ -167,10 +166,12 @@ const Contato = () => {
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                       >
                         <option value="">Selecione...</option>
-                        <option value="escapamento">Escapamento</option>
+                        <option value="escapamento">Abafadores</option>
                         <option value="catalisador">Catalisador</option>
-                        <option value="inox">Produto INOX</option>
-                        <option value="outro">Outro</option>
+                        <option value="inox">Downpipe</option>
+                        <option value="inox">Silenciadores</option>
+                        <option value="inox">Linha Inox</option>
+                        <option value="outro">Acessórios</option>
                       </select>
                     </div>
                   </div>
