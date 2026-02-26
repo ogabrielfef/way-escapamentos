@@ -242,7 +242,7 @@ const Produtos = () => {
               Não encontrou o que procura?
             </h2>
             <p className="text-accent-foreground/80 mb-6 max-w-xl mx-auto">
-              Fabricamos produtos customizados em INOX sob medida. 
+              Fabricamos produtos customizados em aço INOX sob medida. 
               Entre em contato para um orçamento personalizado.
             </p>
             <Button variant="wayPrimary" size="lg" onClick={(e) => e.preventDefault()}>

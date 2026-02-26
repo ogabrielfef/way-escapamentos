@@ -2,10 +2,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Factory, Award, Users } from "lucide-react";
 
+
 const highlights = [
   {
     icon: Factory,
-    value: "2015",
+    value: "2016",
     label: "Fundação",
   },
   {
@@ -15,7 +16,7 @@ const highlights = [
   },
   {
     icon: Users,
-    value: "1.000+",
+    value: "5.000+",
     label: "Clientes Atendidos",
   },
 ];
@@ -39,10 +40,10 @@ const AboutPreview = () => {
               de alta qualidade, com certificação Inmetro e um moderno parque industrial 
               localizado em Careaçu, Sul de Minas Gerais.
             </p>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            {/* <p className="text-muted-foreground mb-8 leading-relaxed">
               Atendemos tanto pessoa física quanto jurídica, com produtos diversificados, 
-              preços justos e soluções customizadas em INOX.
-            </p>
+              preços justos e soluções customizadas em aço INOX.
+            </p> */}
 
             <Link href="/sobre">
               <Button variant="wayPrimary" size="lg" className="group">

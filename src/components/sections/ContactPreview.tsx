@@ -37,7 +37,7 @@ const ContactPreview = () => {
                     Atendimento rápido e direto. Envie suas dúvidas ou solicite um orçamento agora mesmo.
                   </p>
                   <a
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento."
+                    href="https://wa.me/553534760000?text=Olá! Gostaria de solicitar um orçamento."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-display uppercase tracking-wide text-sm hover:bg-[#20BA5C] transition-colors"
@@ -59,8 +59,7 @@ const ContactPreview = () => {
                   <h3 className="font-display font-semibold uppercase tracking-wide text-sm mb-2">
                     Telefone
                   </h3>
-                  <p className="text-foreground font-medium">(11) 99999-9999</p>
-                  <p className="text-muted-foreground text-sm">(11) 3333-4444</p>
+                  <p className="text-foreground font-medium">(35) 3476-0000</p>
                 </div>
               </div>
             </div>
@@ -75,7 +74,7 @@ const ContactPreview = () => {
                   <h3 className="font-display font-semibold uppercase tracking-wide text-sm mb-2">
                     E-mail
                   </h3>
-                  <p className="text-foreground font-medium">contato@wayescapamentos.com.br</p>
+                  <p className="text-foreground font-medium">vendas@wayescapamentos.com.br</p>
                   <p className="text-muted-foreground text-sm">Resposta em até 24h</p>
                 </div>
               </div>
@@ -91,7 +90,7 @@ const ContactPreview = () => {
                   Horário de Atendimento
                 </p>
                 <p className="text-primary-foreground/70 text-sm">
-                  Seg a Sex: 8h às 18h | Sáb: 8h às 13h
+                  Seg a Qui: 7h às 17h | Sex: 7h às 16h
                 </p>
               </div>
             </div>

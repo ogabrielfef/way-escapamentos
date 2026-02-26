@@ -30,12 +30,16 @@ const services = [
   },
   {
     icon: Users,
-    title: "Atendimento PF e PJ",
-    description: "Para pessoa física e revendedores",
+    title: "Atendimento",
+    description: "Para Lojas e Distribuidores",
   },
 ];
 
+
+
 const ServicesPreview = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <section className="way-section bg-way-dark text-primary-foreground overflow-hidden">
       <div className="way-container">
@@ -48,7 +52,7 @@ const ServicesPreview = () => {
             Por Que Escolher a Way?
           </h2>
           <p className="text-primary-foreground/70 text-lg">
-            Mais de 8 anos de experiência fabricando escapamentos e catalisadores com qualidade certificada
+            Mais de {currentYear - 2016} anos de experiência fabricando escapamentos e catalisadores com qualidade certificada
           </p>
         </div>
 
@@ -77,11 +81,11 @@ const ServicesPreview = () => {
         <div className="bg-accent/10 border border-accent/30 rounded-xl p-6 mb-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <span className="block font-display text-3xl font-bold text-accent">2015</span>
+              <span className="block font-display text-3xl font-bold text-accent">2016</span>
               <span className="text-primary-foreground/70 text-sm">Fundação</span>
             </div>
             <div>
-              <span className="block font-display text-3xl font-bold text-accent">500+</span>
+              <span className="block font-display text-3xl font-bold text-accent">4.000+</span>
               <span className="text-primary-foreground/70 text-sm">Modelos</span>
             </div>
             <div>

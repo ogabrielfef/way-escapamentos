@@ -1,6 +1,8 @@
 'use client'
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState } from "react";
 import { 
   MapPin, 
   Phone, 
@@ -10,7 +12,8 @@ import {
   Facebook,
   MessageCircle,
   Building,
-  Navigation
+  Navigation,
+  Contact
 } from "lucide-react";
 
 const contactInfo = [
@@ -22,7 +25,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefones",
-    content: ["(35) 3476-0000", "(35) 99999-9999 (WhatsApp)"],
+    content: ["(35) 3476-0000 (WhatsApp)"],
   },
   {
     icon: Mail,
@@ -43,6 +46,7 @@ const quickContacts = [
     description: "Atendimento rápido para orçamentos e dúvidas",
     action: "Chamar no WhatsApp",
     color: "bg-green-600 hover:bg-green-700",
+    href: "https://wa.me/553534760000",
   },
   {
     icon: Mail,
@@ -50,10 +54,41 @@ const quickContacts = [
     description: "Para orçamentos detalhados e documentação",
     action: "Enviar E-mail",
     color: "bg-primary hover:bg-primary/90",
+    href: "mailto:vendas@wayescapamentos.com.br",
   }
 ];
 
 const Contato = () => {
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setLoading(true)
+
+    const formData = new FormData(e.currentTarget)
+    try {
+      const response = await fetch("/send-email.php", {
+        method: "POST",
+        body: formData,
+      })
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSuccess(true)
+        e.currentTarget.reset()
+
+        setTimeout(() => {
+          setSuccess(false)
+        }, 3000)
+      }
+    } catch (error) {
+      alert("Erro ao enviar. Tente novamente.")
+    }
+    setLoading(false)
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <main className="pt-32">
@@ -78,10 +113,12 @@ const Contato = () => {
           <div className="way-container">
             <div className="grid md:grid-cols-2 gap-4">
               {quickContacts.map((contact) => (
-                <button
+                <a
                   key={contact.title}
+                  href={contact.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`flex items-center gap-4 p-4 rounded-lg text-white transition-all duration-300 ${contact.color}`}
-                  onClick={(e) => e.preventDefault()}
                 >
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                     <contact.icon className="w-6 h-6" />
@@ -94,7 +131,7 @@ const Contato = () => {
                       {contact.description}
                     </p>
                   </div>
-                </button>
+                </a>
               ))}
             </div>
           </div>
@@ -112,7 +149,7 @@ const Contato = () => {
                 <p className="text-muted-foreground mb-6">
                   Preencha o formulário abaixo e retornaremos em até 24 horas úteis.
                 </p>
-                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-5" onSubmit={handleSubmit}>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
@@ -120,8 +157,10 @@ const Contato = () => {
                       </label>
                       <input
                         type="text"
+                        name="nome"
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                         placeholder="Seu nome"
+                        required
                       />
                     </div>
                     <div>
@@ -130,8 +169,10 @@ const Contato = () => {
                       </label>
                       <input
                         type="tel"
+                        name="telefone"
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                         placeholder="(00) 00000-0000"
+                        required
                       />
                     </div>
                   </div>
@@ -141,8 +182,36 @@ const Contato = () => {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                       placeholder="seu@email.com"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      Razão Social *
+                    </label>
+                    <input
+                      type="text"
+                      name="razaoSocial"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                      placeholder="Razão Social da Empresa"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      CNPJ *
+                    </label>
+                    <input
+                      type="text"
+                      name="cnpj"
+                      inputMode="numeric"
+                      // pattern="\d{2}\\d{3}\\d{3}\d{4}\d{2}"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                      placeholder="00.000.000/0000-00"
+                      required
                     />
                   </div>
                   <div className="grid sm:grid-cols-2 gap-5">
@@ -152,6 +221,7 @@ const Contato = () => {
                       </label>
                       <select
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                        name="tipoCliente"
                       >
                         <option value="">Selecione...</option>
                         <option value="pj">Loja</option>
@@ -164,6 +234,7 @@ const Contato = () => {
                       </label>
                       <select
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                        name="tipoProduto"
                       >
                         <option value="">Selecione...</option>
                         <option value="escapamento">Abafadores</option>
@@ -181,6 +252,7 @@ const Contato = () => {
                     </label>
                     <input
                       type="text"
+                      name="veiculo"
                       className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                       placeholder="Ex: Chevrolet Onix 2022"
                     />
@@ -191,12 +263,23 @@ const Contato = () => {
                     </label>
                     <textarea
                       rows={4}
+                      name="mensagem"
                       className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
                       placeholder="Descreva o que você precisa, quantidade, urgência, etc..."
+                      required
                     />
                   </div>
-                  <Button variant="wayPrimary" size="lg" className="w-full" type="submit">
-                    Enviar Solicitação
+                  <Button variant="wayPrimary" size="lg" className="w-full" type="submit" disabled={loading}>
+                    {loading ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                        Enviando...
+                      </>
+                    ) : success ? (
+                      "Enviado com sucesso!"
+                    ) : (
+                      "Enviar Solicitação"
+                    )}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
                     * Campos obrigatórios. Seus dados estão seguros conosco.
@@ -239,20 +322,22 @@ const Contato = () => {
                     Siga-nos para novidades e lançamentos
                   </p>
                   <div className="flex gap-4">
-                    <a
-                      href="#"
+                    <Link
+                      href="https://www.instagram.com/way.escapamentos/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 hover:scale-110 transition-all duration-300"
-                      onClick={(e) => e.preventDefault()}
                     >
                       <Instagram className="w-5 h-5 text-primary-foreground" />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 hover:scale-110 transition-all duration-300"
-                      onClick={(e) => e.preventDefault()}
                     >
                       <Facebook className="w-5 h-5 text-primary-foreground" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -267,14 +352,19 @@ const Contato = () => {
                   <p className="text-primary-foreground/80 mb-4">
                     Agende uma visita para conhecer nosso parque industrial e processo de fabricação.
                   </p>
-                  <Button 
+                  <Link
+                    href="https://www.google.com/maps/place/Way+Escapamentos/@-22.103961,-45.6827789,17z/data=!3m1!4b1!4m6!3m5!1s0x94cbafe5c8b7188d:0x15a56305259fa879!8m2!3d-22.103966!4d-45.680204!16s%2Fg%2F11mbxfsl7f?entry=ttu&g_ep=EgoyMDI2MDIyMy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
                     variant="wayOutline" 
                     className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-                    onClick={(e) => e.preventDefault()}
                   >
                     <Navigation className="w-4 h-4 mr-2" />
                     Ver no Mapa
                   </Button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -28,7 +28,7 @@ const timeline = [
   {
     year: "2023",
     title: "Linha INOX Premium",
-    description: "Lançamento da linha de produtos customizados em aço inox 304.",
+    description: "Lançamento da linha de produtos customizados em aço inox.",
   },
 ];
 
