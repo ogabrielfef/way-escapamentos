@@ -78,16 +78,14 @@ const Footer = () => {
           </p>
           <div className="flex gap-6">
             <Link
-              href="#"
+              href="/politica-de-privacidade"
               className="text-way-light-text/50 hover:text-accent transition-colors text-sm"
-              onClick={(e) => e.preventDefault()}
             >
               Política de Privacidade
             </Link>
             <Link
-              href="#"
+              href="termos-de-uso"
               className="text-way-light-text/50 hover:text-accent transition-colors text-sm"
-              onClick={(e) => e.preventDefault()}
             >
               Termos de Uso
             </Link>

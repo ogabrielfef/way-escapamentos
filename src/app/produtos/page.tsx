@@ -68,7 +68,7 @@ const products = [
   },
 ];
 
-const categories = ["Todos", "Esportivo", "Downpipes", "Ponteiras", "Silenciadores", "Catalisadores", "INOX"];
+const categories = ["Todos", "Abafadores", "Catalisadores", "Downpipes", "Silenciadores", "Linha INOX", "Acessórios"];
 
 // const brands = [
 //   "Chevrolet", "Fiat", "Volkswagen", "Ford", "Honda", "Toyota", 
@@ -131,11 +131,11 @@ const Produtos = () => {
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</span>
-                          <span>Após instalar, pesquise por <strong>"Way Escapamentos"</strong> no app</span>
+                          <span>Após instalar, realize o cadastro</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">4</span>
-                          <span>Baixe nosso catálogo e navegue por todos os produtos offline</span>
+                          <span>Após cadastro é só navegar pelos itens e realizar seu pedido.</span>
                         </li>
                       </ol>
                     </div>
