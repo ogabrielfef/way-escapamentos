@@ -40,13 +40,13 @@ const ProductCard = ({ image, name, category, description, featured }: ProductCa
         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
           {description}
         </p>
-        <Button 
+        {/* <Button 
           variant="wayPrimary" 
           className="w-full mt-auto"
           onClick={(e) => e.preventDefault()}
         >
           Ver Detalhes
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

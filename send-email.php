@@ -25,7 +25,7 @@ if (!$nome || !$telefone || !$email || !$mensagem) {
 }
 
 // Email da empresa (USE O DO DOMÍNIO)
-$to = "contato@seudominio.com";
+$to = "contato@wayescapamentos.com.br";
 $subject = "Nova Solicitação de Orçamento";
 
 $body = "
@@ -44,7 +44,7 @@ Mensagem:
 $mensagem
 ";
 
-$headers = "From: contato@seudominio.com\r\n";
+$headers = "From: contato@wayescapamentos.com.br\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 

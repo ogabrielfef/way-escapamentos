@@ -3,67 +3,72 @@
 import ProductCard from "@/components/sections/ProducCard";
 import { Button } from "@/components/ui/button";
 import { Download, Filter } from "lucide-react";
-import productExhaust1 from "@/assets/product-exhaust-1.jpg";
-import productExhaust2 from "@/assets/product-exhaust-2.jpg";
-import productExhaust3 from "@/assets/product-exhaust-3.jpg";
-import productExhaust4 from "@/assets/product-exhaust-4.jpg";
+
+import silenciosoTraseiroC3 from "@/assets/silencioso-traseiro-c3.jpeg";
+import tbInterJeep from "@/assets/tb-inter-c-flexivel-jeep.jpeg";
+import silenciosoTraseiroFiat from "@/assets/silencioso-traseiro-fiat.jpeg";
+import catalisadorJeep from "@/assets/catalisador-jeep-renegade.jpeg";
+import catalisadorCompass from "@/assets/catalisador-compass.jpeg";
+import catalisadorDuster from "@/assets/catalisador-duster.jpeg";
+import tbInterOnix from "@/assets/tb-inter-c-flexivel-onix.jpeg";
+
 import Link from "next/link";
 
 const products = [
   {
     id: 1,
-    image: productExhaust1,
-    name: "Escapamento Esportivo Dual",
-    category: "Esportivo",
-    description: "Ponteiras duplas em aço inox com acabamento cromado premium. Aumenta performance e som esportivo.",
+    image: silenciosoTraseiroC3,
+    name: "Silencioso - C3 1.0",
+    category: "Silenciadores",
+    description: "Silencioso traseiro - C3 1.0 6V 3 CIL FIREFLY 2022.",
+    featured: true,
+  },
+  {
+    id: 2,
+    image: tbInterJeep,
+    name: "TB Inter c/ flexível",
+    category: "Acessórios",
+    description: "TB Inter c/ flecível - Jeep Renegade 1.3 16V turbo 2022.",
     featured: true,
   },
   {
     id: 3,
-    image: productExhaust3,
-    name: "Downpipe Catless",
-    category: "Downpipes",
-    description: "Downpipe sem catalizador para uso em pista. Construção em aço inox 304 de alta durabilidade.",
+    image: silenciosoTraseiroFiat,
+    name: "Silencioso - Fiat Strada",
+    category: "Silenciadores",
+    description: "Silencioso traseiro - Fiat Strada 1.3 8V 4 Cil Firefly 2020.",
     featured: false,
   },
   {
     id: 4,
-    image: productExhaust4,
-    name: "Ponteira Esportiva Dupla",
-    category: "Ponteiras",
-    description: "Ponteiras esportivas duplas black com acabamento fosco. Design agressivo e som marcante.",
-    featured: true,
+    image: catalisadorJeep,
+    name: "Catalisador - Jeep",
+    category: "Catalisadores",
+    description: "Catalisador - Jeep Renegade 1.3 16V Turbo 2022.",
+    featured: false,
   },
   {
     id: 5,
-    image: productExhaust1,
-    name: "Catalisador Original",
+    image: catalisadorCompass,
+    name: "Catalisador - Compass",
     category: "Catalisadores",
-    description: "Catalisador com certificação Inmetro. Peça de reposição original com garantia de fábrica.",
+    description: "Catalisador - Commander / Compass / Fastback / Pulse / Renegade / Toro 1.3 Turbo 2022.",
     featured: false,
   },
   {
     id: 6,
-    image: productExhaust2,
-    name: "Silenciador Traseiro",
-    category: "Silenciadores",
-    description: "Silenciador traseiro em aço galvanizado. Som equilibrado e durabilidade comprovada.",
+    image: catalisadorDuster,
+    name: "Catalisador - Duster",
+    category: "Catalisadores",
+    description: "Catalisador - Captur / Duster / Duster Oroch / Oroch 1.3 16V 4 Cil Turbo TCE 2022 c/ coletor duplo.",
     featured: false,
   },
   {
     id: 7,
-    image: productExhaust3,
-    name: "Kit Completo Esportivo",
-    category: "Esportivo",
-    description: "Kit completo de escape esportivo incluindo headers, downpipe e ponteiras. Alta performance.",
-    featured: true,
-  },
-  {
-    id: 8,
-    image: productExhaust4,
-    name: "Ponteira INOX Customizada",
-    category: "INOX",
-    description: "Ponteira em aço inox 304 fabricada sob medida. Design personalizado conforme sua preferência.",
+    image: tbInterOnix,
+    name: "TB Inter c/ flexível",
+    category: "Acessórios",
+    description: "TB Inter c/ flexífel - Onix 1.0 12V 3 CIL Turbo / Aspirado 2019.",
     featured: false,
   },
 ];
@@ -135,7 +140,7 @@ const Produtos = () => {
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">4</span>
-                          <span>Após cadastro é só navegar pelos itens e realizar seu pedido.</span>
+                          <span>Após cadastro é só navegar pelos itens e realizar seu pedido</span>
                         </li>
                       </ol>
                     </div>

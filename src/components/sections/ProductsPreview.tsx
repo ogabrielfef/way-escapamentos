@@ -2,26 +2,26 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import productExhaust1 from "@/assets/product-exhaust-1.jpg";
-import productExhaust2 from "@/assets/product-exhaust-2.jpg";
-import productExhaust3 from "@/assets/product-exhaust-3.jpg";
+import catalisador from "@/assets/catalisador-compass.jpeg";
+import silenciador from "@/assets/silencioso-traseiro-c3.jpeg";
+import tbOnix from "@/assets/tb-inter-c-flexivel-onix.jpeg";
 
 const featuredProducts = [
   {
     id: 1,
-    image: productExhaust1,
-    name: "Escapamentos",
+    image: catalisador,
+    name: "Catalisadores",
     description: "Linha completa para diversas montadoras",
   },
   {
     id: 2,
-    image: productExhaust2,
-    name: "Catalisadores",
+    image: silenciador,
+    name: "Silenciadores",
     description: "Certificação Inmetro garantida",
   },
   {
     id: 3,
-    image: productExhaust3,
+    image: tbOnix,
     name: "Produtos INOX",
     description: "Customizados sob medida",
   },
