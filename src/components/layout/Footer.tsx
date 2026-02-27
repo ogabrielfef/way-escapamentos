@@ -84,7 +84,7 @@ const Footer = () => {
               Política de Privacidade
             </Link>
             <Link
-              href="termos-de-uso"
+              href="/termos-de-uso"
               className="text-way-light-text/50 hover:text-accent transition-colors text-sm"
             >
               Termos de Uso

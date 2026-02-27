@@ -103,7 +103,7 @@
 
   .way-card:hover {
     box-shadow: var(--shadow-hover);
-    transform: translateY(-4px);
+    /* transform: translateY(-4px); */
   }
 
     .way-badge {

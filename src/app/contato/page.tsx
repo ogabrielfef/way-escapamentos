@@ -62,32 +62,37 @@ const Contato = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setLoading(true)
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+  setLoading(true)
 
-    const formData = new FormData(e.currentTarget)
-    try {
-      const response = await fetch("/send-email.php", {
-        method: "POST",
-        body: formData,
-      })
+  const formData = new FormData(e.currentTarget)
 
-      const data = await response.json();
+  try {
+    const response = await fetch("/send-email.php", {
+      method: "POST",
+      body: formData,
+    })
 
-      if (data.success) {
-        setSuccess(true)
-        e.currentTarget.reset()
+    const data = await response.json()
 
-        setTimeout(() => {
-          setSuccess(false)
-        }, 3000)
-      }
-    } catch (error) {
-      alert("Erro ao enviar. Tente novamente.")
+    if (data.success) {
+      setSuccess(true)
+      e.currentTarget.reset()
+
+      setTimeout(() => {
+        setSuccess(false)
+      }, 3000)
+    } else {
+      alert(data.message || "Erro ao enviar.")
     }
-    setLoading(false)
+
+  } catch (error) {
+    alert("Erro ao enviar. Tente novamente.")
   }
+
+  setLoading(false)
+}
 
   return (
     <div className="min-h-screen bg-background">
