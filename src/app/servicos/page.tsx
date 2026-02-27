@@ -130,7 +130,7 @@ const Servicos = () => {
             <h1 className="way-heading text-primary-foreground mt-2 mb-4">
               Nossos Serviços
             </h1>
-            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
+            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto text-justify md:text-center hyphens-auto break-words md:hyphens-none">
               Conheça nossa linha completa de produtos e serviços. 
               Da fabricação à entrega, cuidamos de tudo com qualidade e profissionalismo.
             </p>
@@ -147,7 +147,7 @@ const Servicos = () => {
                   className="way-card p-8 animate-slide-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex items-start gap-6">
+                  <div className="flex flex-col lg:flex-row lg:items-center gap-6">
                     <div className="w-16 h-16 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
                       <service.icon className="w-8 h-8 text-accent-foreground" />
                     </div>
@@ -155,7 +155,7 @@ const Servicos = () => {
                       <h3 className="font-display text-xl font-semibold uppercase tracking-wide text-foreground mb-3">
                         {service.title}
                       </h3>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                      <p className="text-muted-foreground mb-4 leading-relaxed text-justify hyphens-auto break-words md:hyphens-none">
                         {service.description}
                       </p>
                       <ul className="space-y-2">
@@ -233,7 +233,7 @@ const Servicos = () => {
                   <h3 className="font-display text-lg font-semibold uppercase tracking-wide text-foreground mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-sm text-justify hyphens-auto break-words md:hyphens-none">
                     {service.description}
                   </p>
                 </div>
@@ -249,7 +249,7 @@ const Servicos = () => {
               <h3 className="font-display text-xl font-semibold uppercase tracking-wide text-foreground mb-4">
                 Importante
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-justify md:text-center hyphens-auto break-words md:hyphens-none">
                 A Way Escapamentos é uma <strong className="text-foreground">fábrica</strong> especializada 
                 na produção de escapamentos e catalisadores. <strong className="text-foreground">Não realizamos 
                 instalação</strong>. Recomendamos que a instalação seja feita por um profissional qualificado 

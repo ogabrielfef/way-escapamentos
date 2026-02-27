@@ -146,7 +146,7 @@ const Contato = () => {
                 <h2 className="font-display text-2xl font-semibold uppercase tracking-wide mb-2 text-foreground">
                   Solicite uma Cotação
                 </h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground mb-6 text-justify md:text-center hyphens-auto break-words">
                   Preencha o formulário abaixo e retornaremos em até 24 horas úteis.
                 </p>
                 <form className="space-y-5" onSubmit={handleSubmit}>
@@ -349,7 +349,7 @@ const Contato = () => {
                       Visite Nossa Fábrica
                     </h3>
                   </div>
-                  <p className="text-primary-foreground/80 mb-4">
+                  <p className="text-primary-foreground/80 mb-4 text-justify hyphens-auto break-words md:hyphens-none">
                     Agende uma visita para conhecer nosso parque industrial e processo de fabricação.
                   </p>
                   <Link

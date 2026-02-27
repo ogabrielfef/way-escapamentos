@@ -51,7 +51,7 @@ const ServicesPreview = () => {
           <h2 className="way-heading text-primary-foreground mt-2 mb-4">
             Por Que Escolher a Way?
           </h2>
-          <p className="text-primary-foreground/70 text-lg">
+          <p className="text-primary-foreground/70 text-lg text-justify md:text-center hyphens-auto break-words md:hyphens-none">
             Mais de {currentYear - 2016} anos de experiência fabricando escapamentos e catalisadores com qualidade certificada
           </p>
         </div>

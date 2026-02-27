@@ -27,7 +27,7 @@ const AboutPreview = () => {
       <div className="way-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="animate-slide-up">
+          <div className="text-center animate-slide-up">
             <span className="text-accent font-display uppercase tracking-widest text-sm font-medium">
               Sobre Nós
             </span>
@@ -35,7 +35,7 @@ const AboutPreview = () => {
               Bem-vindos à{" "}
               <span className="text-primary">Way Escapamentos!</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-6 leading-relaxed text-justify hyphens-auto break-word md:hyphens-none">
               Somos uma fábrica especializada na produção de escapamentos e catalisadores 
               de alta qualidade, com certificação Inmetro e um moderno parque industrial 
               localizado em Careaçu, Sul de Minas Gerais.
@@ -58,7 +58,7 @@ const AboutPreview = () => {
             {highlights.map((item, index) => (
               <div
                 key={item.label}
-                className="bg-background rounded-lg p-6 text-center shadow-way hover:shadow-way-lg transition-shadow duration-300"
+                className="bg-background rounded-lg py-8 text-center shadow-way hover:shadow-way-lg transition-shadow duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center mx-auto mb-3">

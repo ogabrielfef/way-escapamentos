@@ -15,7 +15,7 @@ const ContactPreview = () => {
             <h2 className="way-heading text-foreground mt-2 mb-4">
               Solicite Sua Cotação
             </h2>
-            <p className="way-subheading max-w-2xl mx-auto">
+            <p className="way-subheading max-w-2xl mx-auto text-justify md:text-center hyphens-auto break-words md:hyphens-none">
               Nossa equipe está pronta para atendê-lo com excelência. 
               Entre em contato para orçamentos, dúvidas ou parcerias comerciais.
             </p>

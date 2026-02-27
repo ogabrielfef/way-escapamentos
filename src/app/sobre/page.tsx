@@ -78,7 +78,7 @@ const Sobre = () => {
             <h1 className="way-heading text-primary-foreground mt-2 mb-4">
               Sobre a Way Escapamentos
             </h1>
-            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
+            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto text-justify md:text-center hyphens-auto break-words md:hyphens-none">
               Desde 2016 fabricando escapamentos e catalisadores com qualidade, 
               certificação e compromisso com nossos clientes
             </p>
@@ -90,22 +90,22 @@ const Sobre = () => {
           <div className="way-container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="way-heading text-foreground mb-6">
+                <h2 className="way-heading text-foreground mb-6 text-center">
                   Bem-vindos à{" "}
                   <span className="text-primary">Way Escapamentos!</span>
                 </h2>
-                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                <p className="text-muted-foreground text-lg mb-6 leading-relaxed text-justify hyphens-auto break-words md:hyphens-none">
                   É um prazer tê-los aqui conosco. Com grande satisfação, apresentamos nossa 
                   fábrica equipada com o mais moderno parque industrial, especializada na 
                   fabricação de escapamentos e catalisadores de alta qualidade e certificação 
                   do Inmetro.
                 </p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-justify hyphens-auto break-words md:hyphens-none">
                   A Way traz a expertise e experiência dos nossos diretores e colaboradores, 
                   comprometida em atender o mercado com produtos diversificados, preços justos 
                   e de acordo com as necessidades específicas de nossos clientes.
                 </p>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
+                <p className="text-muted-foreground mb-8 leading-relaxed text-justify hyphens-auto break-words md:hyphens-none">
                   Se você busca escapamentos, catalisadores ou produtos customizados em INOX, 
                   você está no lugar certo! Nossa equipe está pronta para atendê-lo com excelência.
                 </p>
@@ -154,7 +154,7 @@ const Sobre = () => {
                 <h3 className="font-display text-2xl font-semibold uppercase tracking-wide text-foreground mb-4">
                   Nossa Missão
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-justify hyphens-auto break-words md:hyphens-none">
                   Fabricar e comercializar escapamentos e catalisadores de alta qualidade, 
                   com certificação e preços justos, atendendo às necessidades específicas 
                   de cada cliente com excelência e comprometimento.
@@ -168,7 +168,7 @@ const Sobre = () => {
                 <h3 className="font-display text-2xl font-semibold uppercase tracking-wide text-foreground mb-4">
                   Nossa Visão
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-justify hyphens-auto break-words md:hyphens-none">
                   Ser referência nacional na fabricação de escapamentos e catalisadores, 
                   reconhecida pela qualidade dos produtos, inovação constante e pelo 
                   relacionamento de confiança com clientes e parceiros.
@@ -238,7 +238,7 @@ const Sobre = () => {
                     <h3 className="font-display text-lg font-semibold uppercase tracking-wide text-foreground mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground text-justify md:text-center hyphens-auto break-words">
                       {item.description}
                     </p>
                   </div>
@@ -277,7 +277,7 @@ const Sobre = () => {
             <h2 className="font-display text-2xl md:text-3xl font-bold text-accent-foreground uppercase tracking-wide mb-4">
               Venha pra Way Escapamentos!
             </h2>
-            <p className="text-accent-foreground/80 mb-6 max-w-xl mx-auto">
+            <p className="text-accent-foreground/80 mb-6 max-w-xl mx-auto text-justify md:text-center hyphens-auto break-words md:hyphens-none">
               Nossa equipe está pronta para atendê-lo com excelência. 
               Entre em contato e solicite um orçamento.
             </p>

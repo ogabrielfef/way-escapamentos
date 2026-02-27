@@ -1,6 +1,30 @@
 import { Shield } from "lucide-react";
 
 const PoliticaPrivacidade = () => {
+
+  const Section = ({ number, title, children }: { number: string; title: string; children: React.ReactNode }) => (
+  <section className="mb-10">
+    <div className="flex items-start gap-4 mb-4">
+      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold text-sm">
+        {number}
+      </span>
+      <h2 className="text-xl md:text-2xl font-bold text-foreground pt-1">{title}</h2>
+    </div>
+    <div className="ml-14 space-y-3 text-foreground/75 leading-relaxed">{children}</div>
+  </section>
+);
+
+const BulletList = ({ items }: { items: string[] }) => (
+  <ul className="space-y-2">
+    {items.map((item, i) => (
+      <li key={i} className="flex items-start gap-3">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+);
+
   return (
     <div className="min-h-screen flex flex-col">
 
@@ -29,17 +53,17 @@ const PoliticaPrivacidade = () => {
       {/* Content */}
       <main className="flex-1 py-12 md:py-16 bg-background">
         <div className="way-container max-w-4xl">
-          <div className="bg-muted/50 border border-border rounded-xl p-6 mb-10 text-foreground/80 leading-relaxed">
-            <p>
+          <div className="bg-muted/50 border border-border rounded-xl p-6 mb-10 text-foreground/80 leading-relaxed ">
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">
               A WAY ESCAPAMENTOS LTDA, pessoa jurídica de direito privado, inscrita no CNPJ sob nº 23.609.981/0001-74, com sede em Careaçu, Estado de Minas Gerais, doravante denominada simplesmente "Empresa", estabelece a presente Política de Privacidade com a finalidade de demonstrar seu compromisso com a proteção dos dados pessoais coletados por meio de seu website institucional.
             </p>
-            <p className="mt-3">
+            <p className="mt-3 text-justify hyphens-auto break-words md:hyphens-none">
               Esta Política encontra-se em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais – LGPD) e demais normas aplicáveis.
             </p>
           </div>
 
           <Section number="1" title="Dos Dados Pessoais Coletados">
-            <p>A Empresa realiza a coleta exclusiva dos dados pessoais fornecidos voluntariamente pelo titular por meio do formulário de contato/orçamento disponibilizado no site, consistindo em:</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">A Empresa realiza a coleta exclusiva dos dados pessoais fornecidos voluntariamente pelo titular por meio do formulário de contato/orçamento disponibilizado no site, consistindo em:</p>
             <BulletList items={[
               "Nome completo;",
               "Telefone / WhatsApp;",
@@ -49,7 +73,7 @@ const PoliticaPrivacidade = () => {
               "Conteúdo da mensagem enviada;",
               "Endereço IP, coletado automaticamente pelo servidor para fins de segurança.",
             ]} />
-            <p>A Empresa não realiza coleta de cookies de rastreamento, ferramentas analíticas ou tecnologias de monitoramento comportamental.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">A Empresa não realiza coleta de cookies de rastreamento, ferramentas analíticas ou tecnologias de monitoramento comportamental.</p>
           </Section>
 
           <Section number="2" title="Da Finalidade do Tratamento">
@@ -73,12 +97,12 @@ const PoliticaPrivacidade = () => {
           </Section>
 
           <Section number="4" title="Do Compartilhamento de Dados">
-            <p>A Empresa não compartilha, comercializa ou cede dados pessoais a terceiros, salvo quando houver obrigação legal ou determinação de autoridade competente.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">A Empresa não compartilha, comercializa ou cede dados pessoais a terceiros, salvo quando houver obrigação legal ou determinação de autoridade competente.</p>
           </Section>
 
           <Section number="5" title="Do Armazenamento e Segurança">
-            <p>Os dados pessoais são recebidos diretamente no e-mail corporativo da Empresa, sendo armazenados em ambiente protegido, com adoção de medidas técnicas e administrativas adequadas para garantir a confidencialidade, integridade e segurança das informações.</p>
-            <p>A Empresa emprega boas práticas de segurança para prevenir acessos não autorizados, vazamentos, perda ou alteração indevida de dados.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">Os dados pessoais são recebidos diretamente no e-mail corporativo da Empresa, sendo armazenados em ambiente protegido, com adoção de medidas técnicas e administrativas adequadas para garantir a confidencialidade, integridade e segurança das informações.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">A Empresa emprega boas práticas de segurança para prevenir acessos não autorizados, vazamentos, perda ou alteração indevida de dados.</p>
           </Section>
 
           <Section number="6" title="Dos Direitos do Titular">
@@ -97,35 +121,12 @@ const PoliticaPrivacidade = () => {
           </Section>
 
           <Section number="7" title="Das Alterações">
-            <p>A presente Política poderá ser modificada a qualquer tempo, para adequação à legislação vigente ou alterações operacionais, passando a vigorar a partir de sua publicação no site.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">A presente Política poderá ser modificada a qualquer tempo, para adequação à legislação vigente ou alterações operacionais, passando a vigorar a partir de sua publicação no site.</p>
           </Section>
         </div>
       </main>
     </div>
   );
 };
-
-const Section = ({ number, title, children }: { number: string; title: string; children: React.ReactNode }) => (
-  <section className="mb-10">
-    <div className="flex items-start gap-4 mb-4">
-      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold text-sm">
-        {number}
-      </span>
-      <h2 className="text-xl md:text-2xl font-bold text-foreground pt-1">{title}</h2>
-    </div>
-    <div className="ml-14 space-y-3 text-foreground/75 leading-relaxed">{children}</div>
-  </section>
-);
-
-const BulletList = ({ items }: { items: string[] }) => (
-  <ul className="space-y-2">
-    {items.map((item, i) => (
-      <li key={i} className="flex items-start gap-3">
-        <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-        <span>{item}</span>
-      </li>
-    ))}
-  </ul>
-);
 
 export default PoliticaPrivacidade;

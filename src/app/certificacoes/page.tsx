@@ -88,7 +88,7 @@ const Certificacoes = () => {
                 <Image 
                   src={wayLogoImg} 
                   alt="Way Escapamentos" 
-                  className="h-20 md:h-28 w-auto drop-shadow-[0_0_20px_rgba(253,208,7,0.3)]" 
+                  className="h-20 md:h-24 w-auto drop-shadow-[0_0_20px_rgba(253,208,7,0.3)]" 
                 />
               </div>
 
@@ -100,7 +100,7 @@ const Certificacoes = () => {
                 <h1 className="way-heading text-primary-foreground mt-2 mb-4">
                   Certificações e Qualidade
                 </h1>
-                <p className="text-primary-foreground/70 text-lg">
+                <p className="text-primary-foreground/70 text-lg text-justify md:text-center hyphens-auto break-words md:hyphens-none">
                   Nosso compromisso com a excelência vai além das palavras. 
                   Conheça os processos e certificações que garantem a qualidade Way.
                 </p>
@@ -130,8 +130,8 @@ const Certificacoes = () => {
               <h2 className="way-heading text-foreground mt-2 mb-4">
                 Nossas Certificações
               </h2>
-              <p className="way-subheading">
-                Certificações que comprovam nosso compromisso com a qualidade e segurança
+              <p className="way-subheading text-justify md:text-center hyphens-auto break-words md:hyphens-none">
+                Certificações que comprovam nosso compromisso com a qualidade e segurança.
               </p>
             </div>
 
@@ -153,7 +153,7 @@ const Certificacoes = () => {
                   <h3 className="font-display text-xl font-semibold uppercase tracking-wide mb-4">
                     {cert.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-justify hyphens-auto break-words md:hyphens-none">
                     {cert.description}
                   </p>
                 </div>
@@ -172,7 +172,7 @@ const Certificacoes = () => {
               <h2 className="way-heading text-foreground mt-2 mb-4">
                 Controle de Qualidade
               </h2>
-              <p className="way-subheading">
+              <p className="way-subheading text-justify md:text-center hyphens-auto break-words md:hyphens-none">
                 Cada etapa do processo é rigorosamente controlada para garantir a excelência
               </p>
             </div>
@@ -194,7 +194,7 @@ const Certificacoes = () => {
                     <h3 className="font-display text-lg font-semibold uppercase tracking-wide mb-3">
                       {process.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm text-justify hyphens-auto break-words md:hyphens-none">
                       {process.description}
                     </p>
                   </div>
@@ -215,7 +215,7 @@ const Certificacoes = () => {
                 <h2 className="way-heading text-primary-foreground mt-2 mb-6">
                   Laboratório de Testes
                 </h2>
-                <p className="text-primary-foreground/70 text-lg mb-6">
+                <p className="text-primary-foreground/70 text-lg mb-6 text-justify md:text-center hyphens-auto break-words md:hyphens-none">
                   Nossa fábrica conta com um laboratório equipado para realizar testes que asseguram 
                   a qualidade e durabilidade de cada produto fabricado.
                 </p>
@@ -227,7 +227,7 @@ const Certificacoes = () => {
                       <h4 className="font-display font-semibold uppercase tracking-wide text-sm mb-1">
                         Teste de Estanqueidade
                       </h4>
-                      <p className="text-primary-foreground/70 text-sm">
+                      <p className="text-primary-foreground/70 text-sm text-justify hyphens-auto break-words">
                         Verificação de vazamentos utilizando pressão de ar e água para garantir vedação perfeita.
                       </p>
                     </div>
@@ -238,7 +238,7 @@ const Certificacoes = () => {
                       <h4 className="font-display font-semibold uppercase tracking-wide text-sm mb-1">
                         Teste de Resistência
                       </h4>
-                      <p className="text-primary-foreground/70 text-sm">
+                      <p className="text-primary-foreground/70 text-sm text-justify  hyphens-auto break-words">
                         Simulação de condições extremas de temperatura e vibração para validar durabilidade.
                       </p>
                     </div>
@@ -249,7 +249,7 @@ const Certificacoes = () => {
                       <h4 className="font-display font-semibold uppercase tracking-wide text-sm mb-1">
                         Análise Dimensional
                       </h4>
-                      <p className="text-primary-foreground/70 text-sm">
+                      <p className="text-primary-foreground/70 text-sm text-justify hyphens-auto break-words">
                         Medição precisa de todas as dimensões para garantir encaixe perfeito no veículo.
                       </p>
                     </div>

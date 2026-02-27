@@ -29,14 +29,14 @@ const TermosDeUso = () => {
       <main className="flex-1 py-12 md:py-16 bg-background">
         <div className="way-container max-w-4xl">
           <div className="bg-muted/50 border border-border rounded-xl p-6 mb-10 text-foreground/80 leading-relaxed">
-            <p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">
               O acesso e a utilização do website da WAY ESCAPAMENTOS LTDA implicam na plena aceitação das disposições constantes nestes Termos de Uso.
             </p>
           </div>
 
           <Section number="1" title="Do Objeto">
-            <p>O presente website possui caráter exclusivamente institucional e informativo, disponibilizando catálogo parcial de produtos e formulário para solicitação de orçamento.</p>
-            <p>Não há comercialização direta de produtos por meio da plataforma.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">O presente website possui caráter exclusivamente institucional e informativo, disponibilizando catálogo parcial de produtos e formulário para solicitação de orçamento.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">Não há comercialização direta de produtos por meio da plataforma.</p>
           </Section>
 
           <Section number="2" title="Das Condições de Utilização">
@@ -49,7 +49,7 @@ const TermosDeUso = () => {
           </Section>
 
           <Section number="3" title="Da Propriedade Intelectual">
-            <p>Todos os direitos relativos ao conteúdo do site são de titularidade exclusiva da WAY ESCAPAMENTOS LTDA, incluindo, mas não se limitando a:</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">Todos os direitos relativos ao conteúdo do site são de titularidade exclusiva da WAY ESCAPAMENTOS LTDA, incluindo, mas não se limitando a:</p>
             <BulletList items={[
               "Marca e logotipo;",
               "Textos;",
@@ -62,9 +62,9 @@ const TermosDeUso = () => {
           </Section>
 
           <Section number="4" title="Dos Orçamentos e Garantias">
-            <p>As solicitações realizadas por meio do formulário não constituem proposta vinculante ou obrigação de venda.</p>
-            <p>As condições comerciais, valores e prazos serão definidos posteriormente, mediante negociação direta.</p>
-            <p>A garantia dos produtos varia conforme o item adquirido, devendo ser confirmada junto ao vendedor no momento da contratação.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">As solicitações realizadas por meio do formulário não constituem proposta vinculante ou obrigação de venda.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">As condições comerciais, valores e prazos serão definidos posteriormente, mediante negociação direta.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">A garantia dos produtos varia conforme o item adquirido, devendo ser confirmada junto ao vendedor no momento da contratação.</p>
           </Section>
 
           <Section number="5" title="Da Limitação de Responsabilidade">
@@ -77,7 +77,7 @@ const TermosDeUso = () => {
           </Section>
 
           <Section number="6" title="Das Disposições Finais">
-            <p>A Empresa poderá alterar estes Termos a qualquer momento, mediante atualização desta página.</p>
+            <p className="text-justify hyphens-auto break-words md:hyphens-none">A Empresa poderá alterar estes Termos a qualquer momento, mediante atualização desta página.</p>
           </Section>
         </div>
       </main>

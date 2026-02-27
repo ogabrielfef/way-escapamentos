@@ -93,7 +93,7 @@ const Produtos = () => {
             <h1 className="way-heading text-primary-foreground mt-2 mb-4">
               Nossos Produtos
             </h1>
-            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
+            <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto text-justify md:text-center hyphens-auto break-words md:hyphens-none">
               Explore nossa linha completa de escapamentos, catalisadores e acessórios. 
               Produtos com certificação Inmetro e garantia de fábrica.
             </p>
@@ -111,36 +111,36 @@ const Produtos = () => {
                       <Download className="w-12 h-12 text-accent" />
                     </div>
                   </div>
-                  <div className="flex-1 text-center lg:text-left">
+                  <div className="flex-1 text-center md:text-left">
                     <h2 className="font-display text-xl md:text-2xl font-bold text-accent-foreground uppercase tracking-wide mb-3">
                       Catálogo Digital Completo
                     </h2>
-                    <p className="text-accent-foreground/80 mb-4">
+                    <p className="text-accent-foreground/80 mb-4 text-justify md:text-left hyphens-auto break-words">
                       Acesse nosso catálogo completo com mais de 4000 opções para diversas montadoras. 
                       Catálogo gratuito disponível para Android, IOS e PC na plataforma <strong>Baixecatalogo</strong>.
                     </p>
                     
                     {/* Instructions */}
                     <div className="bg-accent-foreground/10 rounded-lg p-4 mb-4">
-                      <p className="font-display text-sm font-semibold text-accent-foreground uppercase tracking-wide mb-3">
+                      <p className="font-display text-sm font-semibold text-accent-foreground uppercase tracking-wide mb-3 text-left">
                         Como acessar:
                       </p>
                       <ol className="text-accent-foreground/80 text-sm space-y-2">
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</span>
-                          <span>Acesse o site <strong>baixecatalogo.com.br/catalogo/way-escapamentos</strong> no seu computador</span>
+                          <span className="text-left">Acesse o site <strong className="break-all">baixecatalogo.com.br/catalogo/way-escapamentos</strong> no seu computador</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</span>
-                          <span>Faça o download gratuito do aplicativo</span>
+                          <span className="text-left">Faça o download gratuito do aplicativo</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</span>
-                          <span>Após instalar, realize o cadastro</span>
+                          <span className="text-left">Após instalar, realize o cadastro</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="bg-accent-foreground text-accent rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">4</span>
-                          <span>Após cadastro é só navegar pelos itens e realizar seu pedido</span>
+                          <span className="text-left">Após cadastro é só navegar pelos itens e realizar seu pedido</span>
                         </li>
                       </ol>
                     </div>
@@ -246,7 +246,7 @@ const Produtos = () => {
             <h2 className="font-display text-2xl md:text-3xl font-bold text-accent-foreground uppercase tracking-wide mb-4">
               Não encontrou o que procura?
             </h2>
-            <p className="text-accent-foreground/80 mb-6 max-w-xl mx-auto">
+            <p className="text-accent-foreground/80 mb-6 max-w-xl mx-auto text-justify md:text-center hyphens-auto break-words md:hyphens-none">
               Fabricamos produtos customizados em aço INOX sob medida. 
               Entre em contato para um orçamento personalizado.
             </p>

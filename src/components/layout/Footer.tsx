@@ -73,7 +73,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-way-light-text/10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-way-light-text/50 text-sm">
+          <p className="text-way-light-text/50 text-sm text-center md:text-left">
             © {currentYear} Way Escapamentos. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
