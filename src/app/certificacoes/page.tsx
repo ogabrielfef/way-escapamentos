@@ -20,7 +20,7 @@ const certifications = [
   {
     icon: ShieldCheck,
     title: "Certificação Inmetro",
-    description: "Todos os nossos produtos passam por rigorosos testes e possuem certificação do Instituto Nacional de Metrologia, garantindo segurança e qualidade conforme normas brasileiras.",
+    description: "Todos os nossos catalizadores passam por rigorosos testes e atendem as normas do Inmetro. Testes realizados em laboratórios credenciados pelo Inmetro. Grantindo segurança e qualidade.",
     badge: "Obrigatório",
   },
   {
@@ -123,14 +123,14 @@ const Certificacoes = () => {
         {/* Certifications Section */}
         <section className="way-section">
           <div className="way-container">
-            <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="text-accent font-display uppercase tracking-widest text-sm font-medium">
                 Reconhecimento
               </span>
               <h2 className="way-heading text-foreground mt-2 mb-4">
                 Nossas Certificações
               </h2>
-              <p className="way-subheading text-justify md:text-center hyphens-auto break-words md:hyphens-none">
+              <p className="way-subheading text-justify md:text-center md:hyphens-none">
                 Certificações que comprovam nosso compromisso com a qualidade e segurança.
               </p>
             </div>

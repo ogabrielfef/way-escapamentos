@@ -347,7 +347,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 </div>
 
                 {/* Visit Us */}
-                <div className="way-card p-8 bg-primary text-primary-foreground">
+                {/* <div className="way-card p-8 bg-primary text-primary-foreground">
                   <div className="flex items-center gap-3 mb-4">
                     <Building className="w-6 h-6" />
                     <h3 className="font-display text-xl font-semibold uppercase tracking-wide">
@@ -370,7 +370,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                     Ver no Mapa
                   </Button>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

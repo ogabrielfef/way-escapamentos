@@ -23,7 +23,6 @@ const mainServices = [
       "Linha completa para carros nacionais e importados",
       "Aço galvanizado de alta durabilidade",
       "Controle de qualidade rigoroso",
-      "Acabamento premium",
     ],
   },
   {
@@ -31,7 +30,7 @@ const mainServices = [
     title: "Catalisadores Certificados",
     description: "Catalisadores com certificação Inmetro, garantindo conformidade com as normas ambientais e excelente desempenho.",
     features: [
-      "Certificação Inmetro obrigatória",
+      "Certificação Inmetro",
       "Aprovação em vistorias",
       "Garantia de fábrica",
       "Modelos para diversas aplicações",
@@ -45,7 +44,7 @@ const mainServices = [
       "Aço inox de alta qualidade",
       "Design personalizado",
       "Produção sob encomenda",
-      "Acabamento espelhado ou escovado",
+      "Acabamento polido ou escovado",
     ],
   },
   {
@@ -75,7 +74,7 @@ const additionalServices = [
   {
     icon: Clock,
     title: "Orçamento Rápido",
-    description: "Resposta em até 24 horas úteis para solicitações de orçamento e dúvidas técnicas.",
+    description: "Resposta rápida a sua solicitação de orçamento.",
   },
   {
     icon: Cog,
@@ -85,7 +84,7 @@ const additionalServices = [
   {
     icon: Package,
     title: "Pedidos por Atacado",
-    description: "Condições especiais para revendedores, oficinas e distribuidores.",
+    description: "Condições especiais para atacado e distribuidores.",
   },
   {
     icon: ShieldCheck,
@@ -251,8 +250,7 @@ const Servicos = () => {
               </h3>
               <p className="text-muted-foreground leading-relaxed text-justify md:text-center hyphens-auto break-words md:hyphens-none">
                 A Way Escapamentos é uma <strong className="text-foreground">fábrica</strong> especializada 
-                na produção de escapamentos e catalisadores. <strong className="text-foreground">Não realizamos 
-                instalação</strong>. Recomendamos que a instalação seja feita por um profissional qualificado 
+                na produção de escapamentos e catalisadores. Recomendamos que a instalação seja feita por um profissional qualificado 
                 ou oficina de sua confiança.
               </p>
             </div>
@@ -266,7 +264,7 @@ const Servicos = () => {
               Precisa de um orçamento?
             </h2>
             <p className="text-accent-foreground/80 mb-6 max-w-xl mx-auto">
-              Entre em contato com nossa equipe. Respondemos em até 24 horas úteis.
+              Entre em contato com nossa equipe.
             </p>
             <Button variant="wayPrimary" size="lg" onClick={(e) => e.preventDefault()}>
               Solicitar Orçamento

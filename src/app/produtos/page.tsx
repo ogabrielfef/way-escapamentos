@@ -184,22 +184,24 @@ const Produtos = () => {
         <section className="way-section">
           <div className="way-container">
             {/* Filter Bar */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col md:flex-row justify-center items-start md:items-center gap-6 mb-10">
+              {/* <div className="flex items-center gap-2">
                 <Filter className="w-5 h-5 text-muted-foreground" />
                 <span className="font-display uppercase tracking-wide text-sm text-foreground">
                   Filtrar por categoria:
                 </span>
-              </div>
+              </div> */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((category, index) => (
                   <button
                     key={category}
-                    className={`px-4 py-2 rounded-full font-display uppercase tracking-wide text-xs transition-all duration-300 ${
-                      index === 0
-                        ? "bg-primary text-primary-foreground shadow-way"
-                        : "bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground"
-                    }`}
+                    className={"px-4 py-2 rounded-full font-display uppercase tracking-wide text-xs transition-all duration-300 bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground"
+                    //   ${
+                    //   index === 0
+                    //     ? "bg-primary text-primary-foreground shadow-way"
+                    //     : "bg-secondary text-secondary-foreground hover:bg-primary hover:text-primary-foreground"
+                    // }
+                    }
                     onClick={(e) => e.preventDefault()}
                   >
                     {category}
@@ -239,7 +241,16 @@ const Produtos = () => {
             </div> */}
           </div>
         </section>
-
+        <section className="bg-primary/10 py-12">
+          <div className="way-container">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-muted-foreground leading-relaxed text-justify md:text-center hyphens-auto break-words md:hyphens-none">
+                Consulte o catálogo mais <strong className="text-foreground">completo</strong> do Brasil para ter
+                acesso a todas as peças.
+              </p>
+            </div>
+          </div>
+        </section>
         {/* CTA Section */}
         <section className="bg-accent py-16">
           <div className="way-container text-center">

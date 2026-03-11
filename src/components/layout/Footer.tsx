@@ -57,7 +57,7 @@ const Footer = () => {
               Categorias
             </h4>
             <ul className="space-y-2">
-              {["Esportivos", "Headers", "Downpipes", "Ponteiras", "Silenciadores"].map((cat) => (
+              {["Esportivos", "Downpipes", "Ponteiras", "Silenciadores"].map((cat) => (
                 <li key={cat}>
                   <Link
                     href="/produtos"

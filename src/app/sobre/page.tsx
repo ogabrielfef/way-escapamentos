@@ -8,12 +8,17 @@ const timeline = [
   {
     year: "2016",
     title: "Fundação",
-    description: "Início das atividades com foco em qualidade e atendimento personalizado.",
+    description: "Fundação da Way Escapamentos, estabelecendo as bases da empresa com foco em qualidade e inovação.",
   },
   {
     year: "2017",
-    title: "Certificação Inmetro",
-    description: "Conquista da certificação Inmetro para todos os produtos da linha.",
+    title: "Início das Atividades",
+    description: "Início oficial das atividades produtivas e comerciais da empresa.",
+  },
+  {
+    year: "2018",
+    title: "Linha Inox Customizada",
+    description: "Lançamento da linha de escapamentos customizados em aço inox.",
   },
   {
     year: "2019",
@@ -21,14 +26,24 @@ const timeline = [
     description: "Ampliação do parque industrial com novos equipamentos e tecnologia.",
   },
   {
-    year: "2021",
-    title: "Catálogo Nacional",
-    description: "Lançamento do catálogo completo atendendo as principais montadoras do Brasil.",
+    year: "2022",
+    title: "Produção de Catalisadores",
+    description: "Início da produção de catalisadores automotivos credenciados pelo Inmetro.",
   },
   {
     year: "2023",
-    title: "Linha INOX Premium",
-    description: "Lançamento da linha de produtos customizados em aço inox.",
+    title: "Catálogo Mais Completo do Brasil",
+    description: "Lançamento do catálogo mais completo do Brasil, ampliando o portfólio de aplicações automotivas. 🇧🇷",
+  },
+  {
+    year: "2024",
+    title: "Novo Polo Industrial",
+    description: "Aquisição da planta do novo polo industrial da Way Escapamentos.",
+  },
+  {
+    year: "2024",
+    title: "Liderança Nacional",
+    description: "Atingimos a liderança de vendas em catalisadores e flexíveis no Brasil. 🇧🇷",
   },
 ];
 
@@ -238,7 +253,7 @@ const Sobre = () => {
                     <h3 className="font-display text-lg font-semibold uppercase tracking-wide text-foreground mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-muted-foreground text-justify md:text-center hyphens-auto break-words">
+                    <p className="text-muted-foreground text-justify">
                       {item.description}
                     </p>
                   </div>

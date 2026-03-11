@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Base Dark Gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1a1a2e_0%,#0a0a0f_50%,#000000_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1c2545_0%,#0a0f1f_50%,#000000_100%)]" />
       
       {/* Animated Gradient Orbs */}
       <div className="absolute inset-0 overflow-hidden">
@@ -78,7 +78,7 @@ const Hero = () => {
       </div>
 
       {/* Exhaust Pipe Silhouettes - Left */}
-      <div className="absolute left-0 bottom-0 w-1/4 h-3/4 opacity-[0.08]">
+      {/* <div className="absolute left-0 bottom-0 w-1/4 h-3/4 opacity-[0.08]">
         <svg viewBox="0 0 150 400" className="w-full h-full" preserveAspectRatio="xMinYMax meet">
           <defs>
             <linearGradient id="pipeGradientL" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -93,10 +93,10 @@ const Hero = () => {
           <ellipse cx="100" cy="390" rx="30" ry="12" fill="url(#pipeGradientL)" opacity="0.6" />
           <rect x="85" y="200" width="30" height="190" rx="15" fill="url(#pipeGradientL)" opacity="0.6" />
         </svg>
-      </div>
+      </div> */}
 
       {/* Exhaust Pipe Silhouettes - Right */}
-      <div className="absolute right-0 bottom-0 w-1/4 h-3/4 opacity-[0.08]">
+      {/* <div className="absolute right-0 bottom-0 w-1/4 h-3/4 opacity-[0.08]">
         <svg viewBox="0 0 150 400" className="w-full h-full" preserveAspectRatio="xMaxYMax meet">
           <defs>
             <linearGradient id="pipeGradientR" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -111,7 +111,7 @@ const Hero = () => {
           <ellipse cx="50" cy="390" rx="30" ry="12" fill="url(#pipeGradientR)" opacity="0.6" />
           <rect x="35" y="180" width="30" height="210" rx="15" fill="url(#pipeGradientR)" opacity="0.6" />
         </svg>
-      </div>
+      </div> */}
 
       {/* Edge Glow Lines */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
