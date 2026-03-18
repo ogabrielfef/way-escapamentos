@@ -1,6 +1,5 @@
 import "./globals.css"
 import type { ReactNode } from "react"
-import { getBaseMetadata } from "@/lib/seo/metadata"
 
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
@@ -22,7 +21,25 @@ const displayFont = Poppins({
   display: "swap",
 })
 
-export const metadata = getBaseMetadata()
+export const metadata = {
+  title: "Way Escapamentos",
+  description: "Escapamentos automotivos com qualidade e segurança.",
+
+  openGraph: {
+    title: "Way Escapamentos",
+    description: "Escapamentos automotivos com qualidade e segurança.",
+    url: "https://wayescapamentos.com.br",
+    siteName: "Way Escapamentos",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+};
 
 export default function RootLayout({
   children,

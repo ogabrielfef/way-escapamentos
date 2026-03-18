@@ -14,6 +14,20 @@ import tbInterOnix from "@/assets/tb-inter-c-flexivel-onix.jpeg";
 
 import Link from "next/link";
 
+export const metadata = {
+  title: "Produtos | Way Escapamentos",
+  description:
+    "Conheça nossa linha de escapamentos e catalisadores automotivos com alta durabilidade e certificação Inmetro.",
+
+  openGraph: {
+    title: "Produtos | Way Escapamentos",
+    description:
+      "Linha completa de escapamentos e catalisadores com qualidade garantida.",
+    url: "https://wayescapamentos.com.br/produtos",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const products = [
   {
     id: 1,

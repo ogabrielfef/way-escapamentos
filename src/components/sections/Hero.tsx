@@ -122,6 +122,17 @@ const Hero = () => {
       {/* Vignette Effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
 
+      <div 
+        className="absolute left-0 top-32 bottom-0 flex items-center pointer-events-none select-none z-[1]"
+        style={{ writingMode: 'vertical-rl' }}
+      >
+        <span 
+          className="font-display text-[10rem] md:text-[16rem] lg:text-[20rem] font-black uppercase tracking-[0.15em] text-white/[0.03] leading-none -ml-8 md:-ml-12"
+        >
+          WAY
+        </span>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 way-container text-center py-20">
         <div className="max-w-4xl mx-auto flex flex-col items-center">

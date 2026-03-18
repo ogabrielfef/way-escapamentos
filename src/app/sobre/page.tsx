@@ -4,6 +4,20 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Factory, Award, Users, MapPin, Target, Eye } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
+export const metadata = {
+  title: "Sobre | Way Escapamentos",
+  description:
+    "Conheça a história da Way Escapamentos, referência na fabricação de escapamentos e catalisadores automotivos.",
+
+  openGraph: {
+    title: "Sobre | Way Escapamentos",
+    description:
+      "Tradição, qualidade e inovação no setor automotivo.",
+    url: "https://wayescapamentos.com.br/sobre",
+    images: ["/og-image.jpg"],
+  },
+};
+
 const timeline = [
   {
     year: "2016",
